@@ -1,0 +1,1 @@
+window.MIETTE_CONFIG={};

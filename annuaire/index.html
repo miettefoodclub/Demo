@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Annuaire des restaurants · Miette</title>
+<meta name="description" content="L'annuaire des restaurants de Charente-Maritime : cartes à jour, horaires, équipements, filtres par commune, cuisine et budget.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://demo.miettefoodclub.com/annuaire/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Miette - FoodClub">
+<meta property="og:title" content="Annuaire des restaurants · Miette">
+<meta property="og:description" content="L'annuaire des restaurants de Charente-Maritime : cartes à jour, horaires, équipements, filtres par commune, cuisine et budget.">
+<meta property="og:url" content="https://demo.miettefoodclub.com/annuaire/">
+<meta property="og:image" content="https://demo.miettefoodclub.com/assets/partage.png">
+<meta property="og:locale" content="fr_FR">
+<meta name="theme-color" content="#f76116">
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="/assets/site-11c18abf.css">
+</head>
+<body>
+<div class="demo-ribbon" role="note"><span class="dr-l">Site de démonstration : les établissements présentés sont fictifs.</span><span class="dr-s">Démo : établissements fictifs</span> <a href="https://miettefoodclub.com/">Voir le vrai site</a></div>
+
+
+<div id="loader" hidden><div class="pl" aria-hidden="true">
+  <p class="pl-tag">On dresse la table…</p>
+  <div class="pl-pct"><span id="pl-n">0</span><small>%</small></div>
+  <div class="pl-track" id="pl-track"><div class="pl-fill" id="pl-fill"></div><div class="pl-walk" id="pl-walk"><div class="mascot"></div></div></div>
+</div><button class="skip" type="button">Passer</button></div>
+<div id="curtain" aria-hidden="true"></div>
+
+<header class="top">
+  <div class="wrap">
+    <a href="/" class="logo" aria-label="Miette - FoodClub, accueil"><img class="lg-a" src="/assets/logo-9dc8ee2a.webp" alt="Miette FoodClub" width="157" height="46"><img class="lg-b" src="/assets/logo-sombre-d0624d17.webp" alt="Miette FoodClub" width="157" height="46"></a>
+    <button class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="nav" id="nav" aria-label="Navigation principale">
+      <a href="/" data-nav="accueil">Accueil</a>
+      <a href="/annuaire/" data-nav="annuaire">Annuaire</a>
+      <a href="/foodtrucks/" data-nav="foodtrucks">Foodtrucks</a>
+      <a href="/partenaire/" data-nav="partenaire">Devenir partenaire</a>
+      <a href="/compte/" data-nav="compte" class="acct" aria-label="Mon compte" title="Mon compte"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg><span class="acct-t">Mon compte</span><span class="fav-n" id="fav-n" hidden></span></a>
+      <a href="/partenaire/#partenaire-contact" class="btn btn-primary">Référencer mon restaurant</a>
+    </nav>
+  </div>
+</header>
+
+<div id="app" tabindex="-1">
+  <div class="wrap page-head">
+    <p class="crumbs"><a href="/">Accueil</a> › Annuaire</p>
+    <h1 class="rv">Les restaurants de la Charente-Maritime</h1>
+    <p class="muted rv d1" style="margin-top:12px;max-width:40em">Cherchez par nom, commune, station ou envie. Toutes les fiches sont des établissements partenaires abonnés ; les fiches « À la une » (mise en avant payante) apparaissent en premier, puis les autres par ordre alphabétique. <a href="/classement/" style="text-decoration:underline">Comment fonctionne le classement</a></p>
+  </div>
+  <div class="wrap dir">
+    <form class="filters collapsed" id="filters" onsubmit="return false">
+      <div class="fhead"><h2>Filtres</h2><button type="button" class="ftoggle" id="ftoggle" aria-expanded="false">Afficher</button></div>
+      <div class="fbody">
+        <div class="fgroup"><label for="f-q">Recherche</label><input class="field" id="f-q" type="search" placeholder="La Palmyre, huîtres…" value=""></div>
+        <div class="fgroup"><label for="f-commune">Commune</label><select class="field" id="f-commune"><option value="">Toutes les communes</option><option>La Tremblade</option><option>Les Mathes</option><option>Meschers-sur-Gironde</option><option>Mornac-sur-Seudre</option><option>Royan</option><option>Saint-Georges-de-Didonne</option><option>Saint-Palais-sur-Mer</option><option>Saujon</option><option>Talmont-sur-Gironde</option></select></div>
+        <div class="fgroup"><label for="f-cuisine">Type de cuisine</label><select class="field" id="f-cuisine"><option value="">Toutes les cuisines</option><option>Bistronomique</option><option>Brasserie</option><option>Cabane à huîtres</option><option>Crêperie</option><option>Cuisine du marché</option><option>Cuisine française</option><option>Pizzeria</option><option>Poissons &amp; fruits de mer</option><option>Poissons &amp; grillades</option></select></div>
+        <div class="fgroup"><span class="lbl">Budget par personne</span><div class="chips"><button type="button" class="chip" data-budget="€" aria-pressed="false" title="moins de 20 €">€ <span class="muted" style="font-size:.78rem">moins de 20 €</span></button><button type="button" class="chip" data-budget="€€" aria-pressed="false" title="20 à 35 €">€€ <span class="muted" style="font-size:.78rem">20 à 35 €</span></button><button type="button" class="chip" data-budget="€€€" aria-pressed="false" title="plus de 35 €">€€€ <span class="muted" style="font-size:.78rem">plus de 35 €</span></button></div></div>
+        <div class="fgroup"><span class="lbl">Équipements</span><div class="chips"><button type="button" class="chip" data-equip="terrasse" aria-pressed="false">Terrasse</button><button type="button" class="chip" data-equip="pmr" aria-pressed="false">Accessible PMR</button><button type="button" class="chip" data-equip="animaux" aria-pressed="false">Animaux acceptés</button><button type="button" class="chip" data-equip="enfant" aria-pressed="false">Menu enfant</button><button type="button" class="chip" data-equip="vege" aria-pressed="false">Végétarien</button><button type="button" class="chip" data-equip="resa" aria-pressed="false">Réservation</button><button type="button" class="chip" data-equip="parking" aria-pressed="false">Parking à proximité</button></div></div>
+        <div class="fgroup"><span class="lbl">Paiement accepté</span><div class="chips"><button type="button" class="chip" data-pay="titres" aria-pressed="false">Carte déjeuner / titres-restaurant</button><button type="button" class="chip" data-pay="ancv" aria-pressed="false">Chèques-Vacances (ANCV)</button></div></div>
+        <div class="fgroup"><span class="lbl">Offre partenaire</span><div class="chips"><button type="button" class="chip offre" id="f-offre" aria-pressed="false"><span class="pastille"></span> Restaurants avec Offre Miette</button></div></div>
+        <button type="button" class="reset" id="f-reset">Effacer les filtres</button>
+      </div>
+    </form>
+    <div style="min-width:0">
+      
+      <div class="res-bar"><p id="count" class="muted" aria-live="polite">9 restaurants</p>
+        <div class="view-sw" role="group" aria-label="Affichage"><button type="button" data-view="liste" aria-pressed="true">Liste</button><button type="button" data-view="carte" aria-pressed="false">Carte</button></div></div>
+      <div id="results"><div class="grid"><a class="card rv prem" href="/restaurants/lecluse-gourmande/">
+    <div style="position:relative"><div class="ph" style="--a:#cfe6e4;--b:#7fc0b6"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 37c4-15 17-23 27-21 11 2 19 11 19 19-4 11-17 15-29 13-8-1-15-5-17-11z"></path><path d="M17 39c6-6 15-10 27-10M21 45c6-4 15-6 25-6"></path><circle cx="34" cy="34" r="3" fill="currentColor"></circle></svg></div><div class="badges"><span class="badge b-une" title="Mise en avant payante (forfait Premium)">★ À la une · annonce</span></div></div>
+    <div><h3>L'Écluse Gourmande</h3><p class="meta">Mornac-sur-Seudre · Port de Mornac</p></div>
+    <p class="meta">Cabane à huîtres · <span class="price">20 à 35 €</span></p>
+    <div class="eq"><span>Terrasse</span><span>Animaux acceptés</span><span>Parking à proximité</span></div>
+  </a><a class="card rv d1 prem" href="/restaurants/exemple/">
+    <div style="position:relative"><div class="ph" style="--a:#ffd9a8;--b:#ff9a5c"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 32c9-13 27-15 39 0-12 15-30 13-39 0z"></path><path d="M47 32l10-9v18z"></path><circle cx="19" cy="30" r="2" fill="currentColor"></circle><path d="M28 24c3 5 3 11 0 16"></path></svg></div><div class="badges"><span class="badge b-une" title="Mise en avant payante (forfait Premium)">★ À la une · annonce</span><span class="badge b-offre"><span class="pastille"></span>Offre Miette</span></div></div>
+    <div><h3>La Marée Haute</h3><p class="meta">Royan · Front de mer</p></div>
+    <p class="meta">Poissons &amp; fruits de mer · <span class="price">28 à 45 €</span></p>
+    <div class="eq"><span>Terrasse</span><span>Accessible PMR</span><span>Végétarien</span><span>Réservation</span></div>
+  </a><a class="card rv d2 prem" href="/restaurants/le-comptoir-des-conches/">
+    <div style="position:relative"><div class="ph" style="--a:#ffe7a3;--b:#f7a14a"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="32" cy="32" r="17"></circle><circle cx="32" cy="32" r="10"></circle><path d="M7 12v10a3 3 0 0 0 6 0V12M10 25v27M57 12c-4 3-5 9-5 15h5v25"></path></svg></div><div class="badges"><span class="badge b-une" title="Mise en avant payante (forfait Premium)">★ À la une · annonce</span><span class="badge b-offre"><span class="pastille"></span>Offre Miette</span></div></div>
+    <div><h3>Le Comptoir des Conches</h3><p class="meta">Saint-Palais-sur-Mer · Conche du Platin</p></div>
+    <p class="meta">Bistronomique · <span class="price">32 à 50 €</span></p>
+    <div class="eq"><span>Terrasse</span><span>Réservation</span><span>Parking à proximité</span><span>Végétarien</span></div>
+  </a><a class="card rv  prem" href="/restaurants/le-petit-phare/">
+    <div style="position:relative"><div class="ph" style="--a:#ffd0b0;--b:#f76116"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 32c9-13 27-15 39 0-12 15-30 13-39 0z"></path><path d="M47 32l10-9v18z"></path><circle cx="19" cy="30" r="2" fill="currentColor"></circle><path d="M28 24c3 5 3 11 0 16"></path></svg></div><div class="badges"><span class="badge b-une" title="Mise en avant payante (forfait Premium)">★ À la une · annonce</span><span class="badge b-offre"><span class="pastille"></span>Offre Miette</span></div></div>
+    <div><h3>Le Petit Phare</h3><p class="meta">La Tremblade · Ronce-les-Bains</p></div>
+    <p class="meta">Poissons &amp; grillades · <span class="price">22 à 38 €</span></p>
+    <div class="eq"><span>Terrasse</span><span>Menu enfant</span><span>Accessible PMR</span><span>Réservation</span></div>
+  </a><a class="card rv d1 " href="/restaurants/chez-ninon/">
+    <div style="position:relative"><div class="ph" style="--a:#ffe0c4;--b:#f3a26b"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 30h46c0 14-10 22-23 22S9 44 9 30z"></path><path d="M24 22c0-4 4-4 4-8M34 22c0-4 4-4 4-8"></path></svg></div><div class="badges"><span class="badge b-offre"><span class="pastille"></span>Offre Miette</span><span class="badge b-conges">En congés</span></div></div>
+    <div><h3>Chez Ninon</h3><p class="meta">Saint-Georges-de-Didonne · Plage de Saint-Georges</p></div>
+    <p class="meta">Brasserie · <span class="price">16 à 28 €</span></p>
+    <div class="eq"><span>Terrasse</span><span>Menu enfant</span><span>Accessible PMR</span><span>Animaux acceptés</span></div>
+  </a><a class="card rv d2 " href="/restaurants/creperie-ty-vent/">
+    <div style="position:relative"><div class="ph" style="--a:#ffeec2;--b:#e9b872"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 40c10-16 40-16 50 0-10 9-40 9-50 0z"></path><path d="M7 40l25-12 25 12"></path><path d="M22 22c0-4 4-4 4-8M38 22c0-4 4-4 4-8"></path></svg></div><div class="badges"><span class="badge b-offre"><span class="pastille"></span>Offre Miette</span></div></div>
+    <div><h3>Crêperie Ty Vent</h3><p class="meta">Meschers-sur-Gironde · Grottes de Régulus</p></div>
+    <p class="meta">Crêperie · <span class="price">12 à 22 €</span></p>
+    <div class="eq"><span>Terrasse</span><span>Menu enfant</span><span>Végétarien</span><span>Animaux acceptés</span></div>
+  </a><a class="card rv  " href="/restaurants/le-belvedere-de-talmont/">
+    <div style="position:relative"><div class="ph" style="--a:#f6dcc8;--b:#d9a07a"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="32" cy="32" r="17"></circle><circle cx="32" cy="32" r="10"></circle><path d="M7 12v10a3 3 0 0 0 6 0V12M10 25v27M57 12c-4 3-5 9-5 15h5v25"></path></svg></div><div class="badges"></div></div>
+    <div><h3>Le Belvédère</h3><p class="meta">Talmont-sur-Gironde</p></div>
+    <p class="meta">Cuisine française · <span class="price">25 à 40 €</span></p>
+    <div class="eq"><span>Terrasse</span><span>Réservation</span></div>
+  </a><a class="card rv d1 " href="/restaurants/le-jardin-de-saujon/">
+    <div style="position:relative"><div class="ph" style="--a:#e4f2c8;--b:#a8cf6b"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 30h46c0 14-10 22-23 22S9 44 9 30z"></path><path d="M24 22c0-4 4-4 4-8M34 22c0-4 4-4 4-8"></path></svg></div><div class="badges"></div></div>
+    <div><h3>Le Jardin de Saujon</h3><p class="meta">Saujon</p></div>
+    <p class="meta">Cuisine du marché · <span class="price">18 à 30 €</span></p>
+    <div class="eq"><span>Végétarien</span><span>Accessible PMR</span><span>Réservation</span><span>Parking à proximité</span></div>
+  </a><a class="card rv d2 " href="/restaurants/sole-mio/">
+    <div style="position:relative"><div class="ph" style="--a:#ffe1a8;--b:#ffb347"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M32 7l22 44c-14 7-30 7-44 0z"></path><path d="M14 44c11 5 25 5 36 0"></path><circle cx="32" cy="25" r="3"></circle><circle cx="26" cy="36" r="3"></circle><circle cx="38" cy="38" r="3"></circle></svg></div><div class="badges"><span class="badge b-offre"><span class="pastille"></span>Offre Miette</span></div></div>
+    <div><h3>Pizzeria Sole Mio</h3><p class="meta">Les Mathes · La Palmyre</p></div>
+    <p class="meta">Pizzeria · <span class="price">14 à 24 €</span></p>
+    <div class="eq"><span>Terrasse</span><span>Menu enfant</span><span>Végétarien</span><span>Animaux acceptés</span></div>
+  </a></div></div>
+    </div>
+  </div></div>
+
+<footer>
+  <div class="wrap">
+    <div class="cols">
+      <div style="display:grid;gap:14px">
+        <a href="/" class="logo" aria-label="Miette FoodClub, accueil"><img class="lg-a" src="/assets/logo-sombre-d0624d17.webp" alt="Miette FoodClub" width="219" height="64"><img class="lg-b" src="/assets/logo-9dc8ee2a.webp" alt="Miette FoodClub" width="219" height="64"></a>
+      </div>
+      <div><h4>Explorer</h4><ul><li><a href="/annuaire/">Tous les restaurants</a></li><li><a href="/foodtrucks/">Foodtrucks</a></li><li><a href="/annuaire/" data-offre="1">Restaurants avec Offre Miette</a></li></ul></div>
+      <div><h4>Infos</h4><ul><li><a href="/partenaire/">Devenir partenaire</a></li><li><a href="/partenaire/#partenaire-contact">Nous contacter</a></li><li class="m-hide"><a href="/mentions-legales/">Mentions légales</a></li><li class="m-hide"><a href="/confidentialite/">Confidentialité</a></li><li class="m-hide"><a href="/cookies/">Cookies</a></li><li class="m-hide"><a href="/conditions-generales/">Conditions générales</a></li><li class="m-hide"><a href="/classement/">Classement des fiches</a></li><li><a href="#" id="cookie-reopen">Gérer mes cookies</a></li><li><a href="#" id="intro-replay">Revoir l'animation d'accueil</a></li></ul></div>
+    </div>
+    <p class="legal-line"><a href="/mentions-legales/">Mentions légales</a> · <a href="/confidentialite/">Confidentialité</a> · <a href="/cookies/">Cookies</a> · <a href="/conditions-generales/">CGV</a> · <a href="/classement/">Classement des fiches</a></p>
+    <p class="fine">© 2026 Miette - FoodClub · Soline VALADON EI · L'annuaire des restaurants de Charente-Maritime</p>
+  </div>
+</footer>
+
+
+<div id="cookies" role="dialog" aria-labelledby="ck-t" hidden>
+  <b id="ck-t">Cookies & mesure d'audience</b>
+  <p style="font-size:.92rem" class="muted">Miette compte les visites de ses fiches de façon anonyme, sans cookie ni outil extérieur, pour informer les restaurants partenaires.</p>
+  <div class="opts" id="ck-opts" hidden>
+    <label><input type="checkbox" checked disabled> Nécessaires au fonctionnement</label>
+    <label><input type="checkbox" id="ck-stats"> Statistiques de visite anonymes</label>
+  </div>
+  <div class="acts">
+    <button class="btn btn-ghost" id="ck-no">Refuser</button>
+    <button class="btn btn-primary" id="ck-yes">Accepter</button>
+  </div>
+  <button class="reset" id="ck-more">Personnaliser</button>
+</div>
+<div id="toast" role="status" aria-live="polite"></div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.110.1"></script>
+<script src="/assets/config-ae8241d9.js"></script>
+<script src="/assets/site-d1fb740f.js"></script>
+</body>
+</html>

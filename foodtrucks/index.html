@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Foodtrucks · Miette</title>
+<meta name="description" content="Bientôt sur Miette : les foodtrucks de Charente-Maritime, leur planning de la semaine et leur carte.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://demo.miettefoodclub.com/foodtrucks/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Miette - FoodClub">
+<meta property="og:title" content="Foodtrucks · Miette">
+<meta property="og:description" content="Bientôt sur Miette : les foodtrucks de Charente-Maritime, leur planning de la semaine et leur carte.">
+<meta property="og:url" content="https://demo.miettefoodclub.com/foodtrucks/">
+<meta property="og:image" content="https://demo.miettefoodclub.com/assets/partage.png">
+<meta property="og:locale" content="fr_FR">
+<meta name="theme-color" content="#f76116">
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="/assets/site-11c18abf.css">
+</head>
+<body>
+<div class="demo-ribbon" role="note"><span class="dr-l">Site de démonstration : les établissements présentés sont fictifs.</span><span class="dr-s">Démo : établissements fictifs</span> <a href="https://miettefoodclub.com/">Voir le vrai site</a></div>
+
+
+<div id="loader" hidden><div class="pl" aria-hidden="true">
+  <p class="pl-tag">On dresse la table…</p>
+  <div class="pl-pct"><span id="pl-n">0</span><small>%</small></div>
+  <div class="pl-track" id="pl-track"><div class="pl-fill" id="pl-fill"></div><div class="pl-walk" id="pl-walk"><div class="mascot"></div></div></div>
+</div><button class="skip" type="button">Passer</button></div>
+<div id="curtain" aria-hidden="true"></div>
+
+<header class="top">
+  <div class="wrap">
+    <a href="/" class="logo" aria-label="Miette - FoodClub, accueil"><img class="lg-a" src="/assets/logo-9dc8ee2a.webp" alt="Miette FoodClub" width="157" height="46"><img class="lg-b" src="/assets/logo-sombre-d0624d17.webp" alt="Miette FoodClub" width="157" height="46"></a>
+    <button class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="nav" id="nav" aria-label="Navigation principale">
+      <a href="/" data-nav="accueil">Accueil</a>
+      <a href="/annuaire/" data-nav="annuaire">Annuaire</a>
+      <a href="/foodtrucks/" data-nav="foodtrucks">Foodtrucks</a>
+      <a href="/partenaire/" data-nav="partenaire">Devenir partenaire</a>
+      <a href="/compte/" data-nav="compte" class="acct" aria-label="Mon compte" title="Mon compte"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg><span class="acct-t">Mon compte</span><span class="fav-n" id="fav-n" hidden></span></a>
+      <a href="/partenaire/#partenaire-contact" class="btn btn-primary">Référencer mon restaurant</a>
+    </nav>
+  </div>
+</header>
+
+<div id="app" tabindex="-1"><div class="ft">
+  <section class="ft-hero">
+    <div class="wrap">
+      <p class="ft-eyebrow rv">Aperçu · bientôt sur Miette</p>
+      <h1 class="rv d1">Les foodtrucks</h1>
+      <p class="ft-lead rv d2">Un espace à part pour les cuisines qui roulent : où ils s'installent chaque jour, ce qu'ils servent, et comment les joindre.</p>
+    </div>
+  </section>
+  <section class="ft-today">
+    <div class="wrap">
+      <div class="sec-head"><div><h2 class="rv">Où les trouver aujourd'hui ?</h2></div>
+        <div class="ft-days" role="group" aria-label="Choisir le jour"><button type="button" data-day="0" aria-pressed="false">Lun</button><button type="button" data-day="1" aria-pressed="false">Mar</button><button type="button" data-day="2" aria-pressed="false">Mer</button><button type="button" data-day="3" aria-pressed="false">Jeu</button><button type="button" data-day="4" aria-pressed="false">Ven</button><button type="button" data-day="5" aria-pressed="true">Sam<i>auj.</i></button><button type="button" data-day="6" aria-pressed="false">Dim</button></div></div>
+      <div class="ft-split">
+        <div class="ft-map"><div class="map"><svg viewBox="0 0 550 545" role="img" aria-label="Carte avec les restaurants">
+    <rect x="0" y="0" width="550" height="545" class="land"></rect>
+    <polygon points="0,0 50,0 78,57.2 30,157.3 5,200.2 78,243.1 148,264.5 208,294.6 238,328.9 288,397.5 338,431.9 455,514.8 485,543.4 390,543.4 270,443.3 190,371.8 0,386.1" style="fill:var(--sea)"></polygon><polygon points="88,0 135,78.6 205,140.1 216,150.1 152,100.1 112,42.9 110,0" style="fill:var(--sea)"></polygon>
+    <text class="water-l" x="18" y="330">Océan Atlantique</text>
+    <text class="water-l" x="300" y="490" transform="rotate(32 300 490)">Estuaire de la Gironde</text>
+    <text class="town" x="250" y="278.9">Royan</text><text class="town" x="115" y="88.7">La Tremblade</text><text class="town" x="95" y="164.4">Les Mathes</text><text class="town" x="320" y="207.3">Saujon</text><text class="town" x="310" y="368.9">Meschers</text><text class="town" x="460" y="486.2">Mortagne</text><text class="town" x="418" y="350.3">Cozes</text><text class="town" x="285" y="263.1">Médis</text>
+    <a href="/foodtrucks/le-camion-iode/" class="pin " aria-label="Le Camion Iodé, Royan"><circle cx="198" cy="286" r="8"></circle><text x="210" y="290">Le Camion Iodé</text></a><a href="/foodtrucks/burger-des-dunes/" class="pin " aria-label="Burger des Dunes, La Palmyre"><circle cx="67" cy="201.6" r="8"></circle><text x="79" y="205.6">Burger des Dunes</text></a><a href="/foodtrucks/tacos-tempo/" class="pin " aria-label="Tacos Tempo, Saujon"><circle cx="322" cy="224.5" r="8"></circle><text x="334" y="228.5">Tacos Tempo</text></a><a href="/foodtrucks/la-crepe-roulante/" class="pin " aria-label="La Crêpe Roulante, Meschers-sur-Gironde"><circle cx="304" cy="391.8" r="8"></circle><text x="316" y="395.8">La Crêpe Roulante</text></a></svg></div></div>
+        <div class="ft-list"><a href="/foodtrucks/le-camion-iode/" class="ft-row"><span class="ft-ic"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 32c9-13 27-15 39 0-12 15-30 13-39 0z"></path><path d="M47 32l10-9v18z"></path><circle cx="19" cy="30" r="2" fill="currentColor"></circle><path d="M28 24c3 5 3 11 0 16"></path></svg></span><span><b>Le Camion Iodé</b><small>Royan · Conche de Pontaillac</small></span><time>18h–23h</time></a><a href="/foodtrucks/burger-des-dunes/" class="ft-row"><span class="ft-ic"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="32" cy="32" r="17"></circle><circle cx="32" cy="32" r="10"></circle><path d="M7 12v10a3 3 0 0 0 6 0V12M10 25v27M57 12c-4 3-5 9-5 15h5v25"></path></svg></span><span><b>Burger des Dunes</b><small>La Palmyre · Avenue de l'Océan</small></span><time>18h30–23h</time></a><a href="/foodtrucks/tacos-tempo/" class="ft-row"><span class="ft-ic"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 30h46c0 14-10 22-23 22S9 44 9 30z"></path><path d="M24 22c0-4 4-4 4-8M34 22c0-4 4-4 4-8"></path></svg></span><span><b>Tacos Tempo</b><small>Saujon · Gare</small></span><time>18h–22h</time></a><a href="/foodtrucks/la-crepe-roulante/" class="ft-row"><span class="ft-ic"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 40c10-16 40-16 50 0-10 9-40 9-50 0z"></path><path d="M7 40l25-12 25 12"></path><path d="M22 22c0-4 4-4 4-8M38 22c0-4 4-4 4-8"></path></svg></span><span><b>La Crêpe Roulante</b><small>Meschers-sur-Gironde · Front de mer</small></span><time>15h–22h</time></a></div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="wrap">
+      <div class="sec-head"><h2 class="rv">Tous les foodtrucks</h2><p class="ft-muted">Le planning de la semaine est sur chaque fiche.</p></div>
+      <div class="ft-grid"><a class="ft-card rv" href="/foodtrucks/le-camion-iode/">
+    <div class="ph" style="--a:#cfe6e4;--b:#7fc0b6;aspect-ratio:16/10;border-radius:16px"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 32c9-13 27-15 39 0-12 15-30 13-39 0z"></path><path d="M47 32l10-9v18z"></path><circle cx="19" cy="30" r="2" fill="currentColor"></circle><path d="M28 24c3 5 3 11 0 16"></path></svg><div class="badges"><span class="badge b-offre"><span class="pastille"></span>Offre Miette</span></div></div>
+    <h3>Le Camion Iodé</h3><p class="ft-muted">Fish &amp; chips, produits de la mer · <span class="price">10 à 16 €</span></p>
+    <p class="ft-where"><b>Royan</b> · Conche de Pontaillac<br><span>18h–23h</span></p>
+  </a><a class="ft-card rv" href="/foodtrucks/burger-des-dunes/">
+    <div class="ph" style="--a:#ffe1a8;--b:#f7a14a;aspect-ratio:16/10;border-radius:16px"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="32" cy="32" r="17"></circle><circle cx="32" cy="32" r="10"></circle><path d="M7 12v10a3 3 0 0 0 6 0V12M10 25v27M57 12c-4 3-5 9-5 15h5v25"></path></svg><div class="badges"><span class="badge b-offre"><span class="pastille"></span>Offre Miette</span></div></div>
+    <h3>Burger des Dunes</h3><p class="ft-muted">Burgers · <span class="price">11 à 17 €</span></p>
+    <p class="ft-where"><b>La Palmyre</b> · Avenue de l'Océan<br><span>18h30–23h</span></p>
+  </a><a class="ft-card rv" href="/foodtrucks/tacos-tempo/">
+    <div class="ph" style="--a:#ffd0b0;--b:#f76116;aspect-ratio:16/10;border-radius:16px"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 30h46c0 14-10 22-23 22S9 44 9 30z"></path><path d="M24 22c0-4 4-4 4-8M34 22c0-4 4-4 4-8"></path></svg></div>
+    <h3>Tacos Tempo</h3><p class="ft-muted">Mexicain · <span class="price">9 à 15 €</span></p>
+    <p class="ft-where"><b>Saujon</b> · Gare<br><span>18h–22h</span></p>
+  </a><a class="ft-card rv" href="/foodtrucks/la-crepe-roulante/">
+    <div class="ph" style="--a:#ffeec2;--b:#e9b872;aspect-ratio:16/10;border-radius:16px"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 40c10-16 40-16 50 0-10 9-40 9-50 0z"></path><path d="M7 40l25-12 25 12"></path><path d="M22 22c0-4 4-4 4-8M38 22c0-4 4-4 4-8"></path></svg><div class="badges"><span class="badge b-offre"><span class="pastille"></span>Offre Miette</span></div></div>
+    <h3>La Crêpe Roulante</h3><p class="ft-muted">Crêpes &amp; galettes · <span class="price">6 à 13 €</span></p>
+    <p class="ft-where"><b>Meschers-sur-Gironde</b> · Front de mer<br><span>15h–22h</span></p>
+  </a></div>
+      <div class="ft-pro rv">
+        <div><h3>Vous avez un foodtruck ?</h3><p>Votre planning de la semaine, votre carte et vos réseaux, sur une fiche faite pour les cuisines qui bougent. Mêmes forfaits que les restaurants : Miette Essentiel 34,90 €, Visibilité 49,90 € et Premium 79,90 € par mois. Laissez vos coordonnées pour être prévenu de l'ouverture.</p></div>
+        <a class="btn btn-white" href="/partenaire/#partenaire-contact" data-ft="1">Être prévenu <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+      </div>
+      <p class="ft-muted" style="margin-top:20px;font-size:.88rem">Aperçu : cet espace ouvrira dans un second temps. Les foodtrucks présentés sont fictifs.</p>
+    </div>
+  </section></div></div>
+
+<footer>
+  <div class="wrap">
+    <div class="cols">
+      <div style="display:grid;gap:14px">
+        <a href="/" class="logo" aria-label="Miette FoodClub, accueil"><img class="lg-a" src="/assets/logo-sombre-d0624d17.webp" alt="Miette FoodClub" width="219" height="64"><img class="lg-b" src="/assets/logo-9dc8ee2a.webp" alt="Miette FoodClub" width="219" height="64"></a>
+      </div>
+      <div><h4>Explorer</h4><ul><li><a href="/annuaire/">Tous les restaurants</a></li><li><a href="/foodtrucks/">Foodtrucks</a></li><li><a href="/annuaire/" data-offre="1">Restaurants avec Offre Miette</a></li></ul></div>
+      <div><h4>Infos</h4><ul><li><a href="/partenaire/">Devenir partenaire</a></li><li><a href="/partenaire/#partenaire-contact">Nous contacter</a></li><li class="m-hide"><a href="/mentions-legales/">Mentions légales</a></li><li class="m-hide"><a href="/confidentialite/">Confidentialité</a></li><li class="m-hide"><a href="/cookies/">Cookies</a></li><li class="m-hide"><a href="/conditions-generales/">Conditions générales</a></li><li class="m-hide"><a href="/classement/">Classement des fiches</a></li><li><a href="#" id="cookie-reopen">Gérer mes cookies</a></li><li><a href="#" id="intro-replay">Revoir l'animation d'accueil</a></li></ul></div>
+    </div>
+    <p class="legal-line"><a href="/mentions-legales/">Mentions légales</a> · <a href="/confidentialite/">Confidentialité</a> · <a href="/cookies/">Cookies</a> · <a href="/conditions-generales/">CGV</a> · <a href="/classement/">Classement des fiches</a></p>
+    <p class="fine">© 2026 Miette - FoodClub · Soline VALADON EI · L'annuaire des restaurants de Charente-Maritime</p>
+  </div>
+</footer>
+
+
+<div id="cookies" role="dialog" aria-labelledby="ck-t" hidden>
+  <b id="ck-t">Cookies & mesure d'audience</b>
+  <p style="font-size:.92rem" class="muted">Miette compte les visites de ses fiches de façon anonyme, sans cookie ni outil extérieur, pour informer les restaurants partenaires.</p>
+  <div class="opts" id="ck-opts" hidden>
+    <label><input type="checkbox" checked disabled> Nécessaires au fonctionnement</label>
+    <label><input type="checkbox" id="ck-stats"> Statistiques de visite anonymes</label>
+  </div>
+  <div class="acts">
+    <button class="btn btn-ghost" id="ck-no">Refuser</button>
+    <button class="btn btn-primary" id="ck-yes">Accepter</button>
+  </div>
+  <button class="reset" id="ck-more">Personnaliser</button>
+</div>
+<div id="toast" role="status" aria-live="polite"></div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.110.1"></script>
+<script src="/assets/config-ae8241d9.js"></script>
+<script src="/assets/site-d1fb740f.js"></script>
+</body>
+</html>
